@@ -130,8 +130,6 @@ GameObject:
   - component: {fileID: 1349571125066346704}
   - component: {fileID: 1349571125066346705}
   - component: {fileID: 1349571125066346718}
-  - component: {fileID: 1349571125066346719}
-  - component: {fileID: 4839099395065284490}
   m_Layer: 0
   m_Name: BadGuy(Shoot)
   m_TagString: Enemy
@@ -286,40 +284,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5466624343574135665, guid: bafc0af36be840349bb5d605c89ed4eb, type: 3}
   bulletPos: {fileID: 1349571125679678557}
---- !u!114 &1349571125066346719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349571125066346716}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451347cb9afc2f4489379b1ac72c83bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  force: 5
---- !u!114 &4839099395065284490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349571125066346716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a4ae276cd2d1649bc78b6a79e84655, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  player: {fileID: 0}
-  shotPoint: {fileID: 1349571125679678557}
-  gun: {fileID: 2023244877629771089}
-  enemyBullet: {fileID: 5466624343574135665, guid: bafc0af36be840349bb5d605c89ed4eb, type: 3}
-  followPlayerRange: 5
-  attackRange: 3
-  startTimebtwnShots: 0.1
 --- !u!1 &1349571125108307686
 GameObject:
   m_ObjectHideFlags: 0
