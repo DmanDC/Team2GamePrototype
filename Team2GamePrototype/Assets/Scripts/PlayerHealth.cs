@@ -8,12 +8,23 @@ public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth = 100;
-    public int damage = 2;
+    public int damage;
     public bool death = false;
 
     public HealthBar healthBar;
     private void Start()
     {
+        // Try to auto-resolve if not set in Inspector (prefab case)
+        if (healthBar == null)
+        {
+            // 1) if you made the bar a child of the Player prefab
+            healthBar = GetComponentInChildren<HealthBar>(true);
+
+            // 2) otherwise, find the HUD bar that already exists in the scene
+            if (healthBar == null) healthBar = FindObjectOfType<HealthBar>(true);
+        }
+
+
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -43,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Destroy(gameObject, 0.2f);
         death = true;
-        enabled = false;
+        
     }
 
 }

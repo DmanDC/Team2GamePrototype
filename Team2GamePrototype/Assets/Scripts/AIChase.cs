@@ -1,33 +1,38 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-    public GameObject player;
-    public float speed;
-    public float distanceBetween;
+    public float speed = 3f;
+    public float distanceBetween = 8f;
 
+    private Transform target;    // ← use Transform, resolve at runtime
     private float distance;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        TryResolvePlayer();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (target == null) TryResolvePlayer();
+        if (target == null) return; // still no player, bail safely
 
-        
-       
-        if(distance < distanceBetween)
+        distance = Vector2.Distance(transform.position, target.position);
+        Vector2 direction = target.position - transform.position;
+        direction.Normalize();
+
+        if (distance < distanceBetween)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
+    }
+
+    private void TryResolvePlayer()
+    {
+        var go = GameObject.FindGameObjectWithTag("Player");
+        target = go != null ? go.transform : null;
     }
 }

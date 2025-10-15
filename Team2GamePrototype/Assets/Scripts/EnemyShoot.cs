@@ -10,34 +10,36 @@ public class EnemyShoot : MonoBehaviour
 
     private float timer;
     private GameObject player;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-        // Update is called once per frame
-        void Update()
+    void Update()
+    {
+        // Re-acquire if lost/not yet spawned
+        if (player == null)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player == null) return; // still nothing this frame
+        }
 
-
-            float distance = Vector2.Distance(transform.position, player.transform.position);
-            Debug.Log(distance);
-
-            if (distance < 5)
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance < 5f)
+        {
+            timer += Time.deltaTime;
+            if (timer > 3f)
             {
-                timer += Time.deltaTime;
-                if (timer > 3)
-                {
-                    timer = 0;
-                    Shoot();
-                }
+                timer = 0f;
+                Shoot();
             }
+        }
+    }
 
-        }
-        void Shoot()
-        {
-            Instantiate(bullet, bulletPos.position, Quaternion.identity);
-        }
-    
+    void Shoot()
+    {
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+    }
+
 }

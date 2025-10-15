@@ -16,35 +16,30 @@ public class SpawnPlayer : MonoBehaviour
 // Start is called before the first frame update
     void Start()
     {
-        // Prevent duplicates if something already spawned a Player
+        // If someone already spawned a Player in this scene, do nothing
         var existing = GameObject.FindGameObjectWithTag("Player");
         if (existing != null) return;
 
+        // Route logic: only the matching spawner should fire when a door set NextSpawnId
         string route = SceneSpawnRouter.NextSpawnId;
         bool hasRoute = !string.IsNullOrEmpty(route);
 
-        // If a door specified a spawn, only the matching SpawnPlayer should run
         if (hasRoute && route != spawnId) return;
 
-        // If no route is provided (e.g., first ever entry), you can either:
-        //   - return;                         // require a door route, OR
-        //   - allow a single default spawn (your existing firstSpawnDone logic)
-        // Here we allow your first-time start behavior:
-        if (!hasRoute && firstSpawnDone) return;
+        // Decide spawn position:
+        // - If a route was provided, use THIS spawner’s transform
+        // - If no route (fresh load via Restart), prefer mapStart if assigned; else this transform
+        Vector3 spawnPos = (hasRoute || mapStart == null) ? transform.position : mapStart.position;
 
+        var playerClone = Instantiate(PlatformerPlayer, spawnPos, Quaternion.identity);
 
-        // Use mapStart ONLY the first time; after that, use this object's position
-        Vector3 spawnPos = (!firstSpawnDone && mapStart != null) ? mapStart.position : transform.position;
-
-        GameObject playerClone = Instantiate(PlatformerPlayer, spawnPos, Quaternion.identity);
-
-        // Tell the camera to follow the freshly spawned clone (unchanged behavior)
-        CamFollowPlayer cam = Camera.main.GetComponent<CamFollowPlayer>();
+        var cam = Camera.main ? Camera.main.GetComponent<CamFollowPlayer>() : null;
         if (cam != null) cam.player = playerClone;
 
-        // Mark that we've done the first-start spawn
-        firstSpawnDone = true;
+        // Clear the router after the correct spawner has fired
+        SceneSpawnRouter.NextSpawnId = null;
     }
+
 
 
 }
