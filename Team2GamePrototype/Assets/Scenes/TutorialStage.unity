@@ -5699,6 +5699,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 456137673}
     m_Modifications:
+    - target: {fileID: 3352940845997000864, guid: 025b24bac40053e448d36d2d9cdee5e6, type: 3}
+      propertyPath: textbox
+      value: 
+      objectReference: {fileID: 730381884}
+    - target: {fileID: 3352940845997000864, guid: 025b24bac40053e448d36d2d9cdee5e6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352940845997000864, guid: 025b24bac40053e448d36d2d9cdee5e6, type: 3}
+      propertyPath: DialogPanel
+      value: 
+      objectReference: {fileID: 1225406090}
+    - target: {fileID: 3352940845997000864, guid: 025b24bac40053e448d36d2d9cdee5e6, type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 310296588}
+    - target: {fileID: 4054059107230355582, guid: 025b24bac40053e448d36d2d9cdee5e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4948146438014983970, guid: 025b24bac40053e448d36d2d9cdee5e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

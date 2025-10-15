@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 //Must add this using statment to use TMP_Text
 using TMPro;
 using UnityEngine.Analytics;
@@ -23,6 +24,23 @@ public class DialogManager : MonoBehaviour
 
     private void OnEnable()
     {
+        // Auto-wire if something wasn’t set in the Inspector
+        if (!DialogPanel) DialogPanel = gameObject; // or find the panel explicitly
+        if (!textbox) textbox = GetComponentInChildren<TMPro.TMP_Text>(true);
+        if (!continueButton)
+        {
+            var btn = GetComponentInChildren<Button>(true); // finds the first Button (even if inactive)
+            if (btn) continueButton = btn.gameObject;       // assign its GameObject
+        }
+
+        // Final guard: if anything is still missing, bail with a clear message
+        if (!DialogPanel || !textbox || !continueButton || sentences == null || sentences.Length == 0)
+        {
+            Debug.LogError("DialogManager not wired in this scene: assign DialogPanel, textbox, continueButton, and sentences.");
+            enabled = false;
+            return;
+        }
+
         // If we've already shown this dialog in this app session, hide the panel and exit
         if (shownThisSession.Contains(dialogKey))
         {
