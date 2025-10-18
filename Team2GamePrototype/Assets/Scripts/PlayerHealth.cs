@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth = 100;
-    public int damage;
+    public int damage = 20;
     public bool death = false;
 
     public HealthBar healthBar;
