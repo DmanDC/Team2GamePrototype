@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Bullet2 : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Bullet2 : MonoBehaviour
     public Rigidbody2D rb;
     public int damage = 25;
     public GameObject player;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +27,12 @@ public class Bullet2 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        PlayerHealth currentHealth = hitInfo.GetComponent<PlayerHealth>();
-        if (hitInfo.gameObject.tag == "Player")
+       
+
+        // if bullet hits wall, destroy bullet
+        if (hitInfo.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            currentHealth.TakeDamage();
+            Debug.Log("Bullet has impacted the platform!");
             Destroy(gameObject);
         }
 

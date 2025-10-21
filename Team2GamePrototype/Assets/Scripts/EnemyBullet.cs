@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -36,12 +37,12 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        PlayerHealth currentHealth = other.GetComponent<PlayerHealth>();
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealth>().currentHealth -= 15;
-            Destroy(gameObject, 1f);
+            currentHealth.TakeDamage();
+            Destroy(gameObject);
         }
-
     }
 
 }
