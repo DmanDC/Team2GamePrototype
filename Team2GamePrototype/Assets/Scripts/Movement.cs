@@ -31,8 +31,12 @@ public class Movement : MonoBehaviour
 
     private float horizontalInput;
     // Start is called before the first frame update
+
+    private GameObject targetObject;
     void Start()
     {
+
+        targetObject = GameObject.Find("DialogPanel");
         //Get the Rigidbody2D component attached to the game object
         rb = GetComponent<Rigidbody2D>();
 
@@ -46,6 +50,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (targetObject == true)
+        {
+            horizontalInput = 0f;
+            return;
+        }
+
+
         horizontalInput = Input.GetAxis("Horizontal");
 
         //check for jump input
@@ -68,7 +79,7 @@ public class Movement : MonoBehaviour
         //ensure the player is facing the direction of movement
         if (horizontalInput > 0)
         {
-            transform.rotation = Quaternion.Euler(0,0,0); //facing right
+            transform.rotation = Quaternion.Euler(0, 0, 0); //facing right
         }
         else if (horizontalInput < 0)
         {
@@ -76,5 +87,5 @@ public class Movement : MonoBehaviour
         }
     }
 
- 
+
 }

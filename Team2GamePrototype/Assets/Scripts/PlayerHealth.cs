@@ -41,8 +41,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage()
     {
-       
-         currentHealth -= damage;
+
+        currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Destroy(gameObject, 0.2f);
         death = true;
-        
+
     }
 
 }

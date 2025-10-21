@@ -19,16 +19,16 @@ public class EnemyBullet : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,0,rot + 90);
+        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
 
-     
+
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 10)
+        if (timer > 10)
         {
             Destroy(gameObject);
         }
@@ -41,7 +41,7 @@ public class EnemyBullet : MonoBehaviour
             other.gameObject.GetComponent<PlayerHealth>().currentHealth -= 15;
             Destroy(gameObject, 1f);
         }
- 
+
     }
 
 }

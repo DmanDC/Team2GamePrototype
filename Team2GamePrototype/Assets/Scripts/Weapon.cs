@@ -22,7 +22,8 @@ public class Weapon : MonoBehaviour
             StartCoroutine(Shoot());
         }
     }
-    IEnumerator Shoot(){ 
+    IEnumerator Shoot()
+    {
         canFire = false;
         for (int i = 0; i < burstFireNumShots; i++)
         {

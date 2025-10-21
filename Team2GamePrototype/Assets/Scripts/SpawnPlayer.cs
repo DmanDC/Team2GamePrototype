@@ -13,7 +13,7 @@ public class SpawnPlayer : MonoBehaviour
     [SerializeField] private string spawnId = "FromEntrance";
 
     private static bool firstSpawnDone = false;
-// Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
         // If someone already spawned a Player in this scene, do nothing

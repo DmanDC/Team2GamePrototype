@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 //Must add this using statment to use TMP_Text
 using TMPro;
+using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public TMP_Text textbox;
@@ -15,9 +16,11 @@ public class DialogManager : MonoBehaviour
     public GameObject continueButton;
     public GameObject DialogPanel;
 
+
+
     public string dialogKey = "Intro_01";
 
-   
+
 
     // session-memory: resets when the app restarts (and when domain reload happens in Editor)
     private static readonly HashSet<string> shownThisSession = new HashSet<string>();
@@ -50,6 +53,8 @@ public class DialogManager : MonoBehaviour
 
         // Make sure the panel is visible before typing
         if (DialogPanel != null) DialogPanel.SetActive(true);
+
+
 
         if (continueButton != null) continueButton.SetActive(false);
 

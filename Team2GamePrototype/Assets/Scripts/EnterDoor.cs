@@ -13,13 +13,13 @@ public class EnterDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      if (collision.GetComponent<DungeonEntrance>())
+        if (collision.GetComponent<DungeonEntrance>())
         {
             sceneToLoad = "Dungeon1stFloor";
             targetSpawnId = "FromEntrance";
             enterAllowed = true;
         }
-else if (collision.GetComponent<DungeonExit>())
+        else if (collision.GetComponent<DungeonExit>())
         {
             sceneToLoad = "TutorialStage";
             targetSpawnId = "FromExit";
@@ -44,13 +44,13 @@ else if (collision.GetComponent<DungeonExit>())
             targetSpawnId = "FromEntrance";
             enterAllowed = true;
         }
-       /* else if (collision.GetComponent<Latter2>())
-        {
-            sceneToLoad = "Dungeon1stFloorRoom2";
-            targetSpawnId = "FromExit";
-            enterAllowed = true;
-        }
-       */
+        /* else if (collision.GetComponent<Latter2>())
+         {
+             sceneToLoad = "Dungeon1stFloorRoom2";
+             targetSpawnId = "FromExit";
+             enterAllowed = true;
+         }
+        */
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -69,7 +69,7 @@ else if (collision.GetComponent<DungeonExit>())
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

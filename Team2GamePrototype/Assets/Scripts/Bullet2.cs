@@ -26,7 +26,7 @@ public class Bullet2 : MonoBehaviour
         }
 
         PlayerHealth currentHealth = hitInfo.GetComponent<PlayerHealth>();
-            if(hitInfo.gameObject.tag == "Player")
+        if (hitInfo.gameObject.tag == "Player")
         {
             currentHealth.TakeDamage();
             Destroy(gameObject);
