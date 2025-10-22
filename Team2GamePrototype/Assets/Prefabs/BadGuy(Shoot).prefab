@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1349571125066346704}
   - component: {fileID: 1349571125066346705}
   - component: {fileID: 3959428813006662687}
+  - component: {fileID: 8626627563833965549}
   m_Layer: 0
   m_Name: BadGuy(Shoot)
   m_TagString: Enemy
@@ -195,7 +196,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0.94509804, g: 0.6573481, b: 0.24313724, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -267,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e80e4f109b070b49ac19cddab263a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8218182139364940424, guid: 33418fb77d98e5a4d97cacdd8f9a63b1, type: 3}
   speed: 1
   distanceBetween: 6
 --- !u!114 &3959428813006662687
@@ -284,6 +284,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5416045524794172029, guid: b434e8706aca14c43adce3253787d38a, type: 3}
   bulletPos: {fileID: 1349571125679678557}
+--- !u!95 &8626627563833965549
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349571125066346716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3559cfc4f82e29e48b63343f57f00d51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1349571125108307686
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +570,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f21b20d1c360eca4e9926d44d3405a83, type: 3}
+  m_Sprite: {fileID: 1695344798474130518, guid: 529817535466bc64c98ca8b108be7456, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
