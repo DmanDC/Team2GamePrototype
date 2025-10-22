@@ -201,13 +201,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8218182139364940424}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f4e03b0277597248a0577a4e8b57a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 6106555851095541372, guid: 31c94dd426198b14a85c1a2634170b5f, type: 3}
-  lowestY: 50
+  lowestY: -50
   reachThreashold: 0.1
   targetPosition: {x: 0, y: 0}
   startSceneName: TutorialStage
