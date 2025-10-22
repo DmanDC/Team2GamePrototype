@@ -33,6 +33,7 @@ public class Movement : MonoBehaviour
 
     private float horizontalInput;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     void Start()
     {
@@ -48,6 +49,17 @@ public class Movement : MonoBehaviour
 >>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+=======
+    // Start is called before the first frame update
+
+    private GameObject targetObject;
+    void Start()
+    {
+
+        targetObject = GameObject.Find("DialogPanel");
+        //Get the Rigidbody2D component attached to the game object
+        rb = GetComponent<Rigidbody2D>();
+>>>>>>> f6bf71acff5b53f281a77524660b3b3e290361c1
 
         if (groundCheck == null)
         {
@@ -99,5 +111,8 @@ public class Movement : MonoBehaviour
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+=======
+>>>>>>> f6bf71acff5b53f281a77524660b3b3e290361c1
 }

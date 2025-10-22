@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Team2GamePrototype/Assets/Animation.meta
 guid: da821964d0c21dd4caa601674f8baa7f
+========
+guid: 7e84f5afa218e8d4ca6016faa5ac2dc2
+>>>>>>>> f6bf71acff5b53f281a77524660b3b3e290361c1:Team2GamePrototype/Assets/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -37,9 +37,12 @@ public class Weapon : MonoBehaviour
         // if (Input.GetButton("Fire1") && canFire) { StartCoroutine(Shoot()); }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+=======
+>>>>>>> f6bf71acff5b53f281a77524660b3b3e290361c1
     IEnumerator Shoot()
     {
         canFire = false;
