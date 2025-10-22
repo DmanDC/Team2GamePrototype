@@ -23,24 +23,43 @@ public class Movement : MonoBehaviour
     // Radius for ground check
     public float groundCheckRadius = 0.2f;
 
-    // References
+    // Reference to Rigidbody2D
     private Rigidbody2D rb;
+
+    // Keep track if we are on the ground
+    private bool isGrounded;
+
     private Animator anim;
 
-    // State
-    private bool isGrounded;
     private float horizontalInput;
-
-    // Optional: block movement when a dialog panel is visible
-    private GameObject dialogPanel;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     void Start()
     {
+=======
+    // Start is called before the first frame update
+
+    private GameObject targetObject;
+    void Start()
+    {
+
+        targetObject = GameObject.Find("DialogPanel");
+        //Get the Rigidbody2D component attached to the game object
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+=======
+    // Start is called before the first frame update
 
-        // Optional: only used if a UI panel named "DialogPanel" exists
-        dialogPanel = GameObject.Find("DialogPanel");
+    private GameObject targetObject;
+    void Start()
+    {
+
+        targetObject = GameObject.Find("DialogPanel");
+        //Get the Rigidbody2D component attached to the game object
+        rb = GetComponent<Rigidbody2D>();
+>>>>>>> f6bf71acff5b53f281a77524660b3b3e290361c1
 
         if (groundCheck == null)
         {
@@ -50,12 +69,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        // If a dialog panel exists and is visible, freeze movement
-        if (dialogPanel != null && dialogPanel.activeInHierarchy)
+        if (targetObject == true)
         {
             horizontalInput = 0f;
             return;
         }
+
 
         horizontalInput = Input.GetAxis("Horizontal");
 
@@ -71,25 +90,29 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
         // Ground check
-        if (groundCheck != null)
-        {
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Drive Animator (Idle <-> Walk)
-        if (anim != null)
-        {
-            anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        }
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
         // Face direction
-        if (horizontalInput > 0f)
+        if (horizontalInput > 0)
+<<<<<<< HEAD
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+=======
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0, 0, 0); //facing right
         }
-        else if (horizontalInput < 0f)
-        {
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-        }
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+        else if (horizontalInput < 0)
+            transform.rotation = Quaternion.Euler(0, 180, 0);
     }
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+=======
+>>>>>>> f6bf71acff5b53f281a77524660b3b3e290361c1
 }
