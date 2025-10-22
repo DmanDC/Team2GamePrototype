@@ -137,7 +137,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 87e92fbc5d0e0f74c85f09f20b5467ec, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -155,8 +155,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06899443, y: 0.09920758}
-  m_Size: {x: 0.5124392, y: 1.8015848}
+  m_Offset: {x: -0.077843964, y: -0.033153772}
+  m_Size: {x: 1.0377482, y: 2.0663075}
   m_Direction: 0
 --- !u!114 &8218182139364940419
 MonoBehaviour:
@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696b8c9a919464143927b8da2bf913fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 10
+  moveSpeed: 4
+  jumpForce: 7
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -191,6 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8218182138969954773}
   bulletPrefab: {fileID: 5466624343574135665, guid: bafc0af36be840349bb5d605c89ed4eb, type: 3}
+  burstFireNumShots: 3
+  timeBtwnShots: 0.3
+  burstCoolDown: 0.5
 --- !u!114 &8218182139364940421
 MonoBehaviour:
   m_ObjectHideFlags: 0
