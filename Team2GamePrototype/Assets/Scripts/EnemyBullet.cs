@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -19,16 +20,16 @@ public class EnemyBullet : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,0,rot + 90);
+        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
 
-     
+
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 10)
+        if (timer > 10)
         {
             Destroy(gameObject);
         }
@@ -36,12 +37,12 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        PlayerHealth currentHealth = other.GetComponent<PlayerHealth>();
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealth>().currentHealth -= 15;
-            Destroy(gameObject, 1f);
+            currentHealth.TakeDamage();
+            Destroy(gameObject);
         }
- 
     }
 
 }

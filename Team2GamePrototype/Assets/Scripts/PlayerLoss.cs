@@ -86,7 +86,7 @@ public class PlayerLoss : MonoBehaviour
         {
             SceneManager.LoadScene(startSceneName);   // ← go to TutorialStage (set in Inspector)
         }
-        
+
 
     }
 

@@ -6,16 +6,27 @@ public class CamFollowPlayer : MonoBehaviour
 {
     //Set this reference in the inspector
     public GameObject player;
+    [SerializeField]
+    private float _minX;
+    [SerializeField]
+    private float _minY;
+    [SerializeField]
+    private float _maxX;
+
+    [SerializeField]
+    private float _maxY;
+
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (player == null) return;
-        //set the camera's position to the players position
-        transform.position = new Vector3 (
-            player.transform.position.x,
-            player.transform.position.y,
-            transform.position.z);
+        if (!player) return;
+
+        // Follow player but never let camera center go below min X/Y
+        float targetX = Mathf.Clamp(player.transform.position.x, _minX, _maxX);
+        float targetY = Mathf.Clamp(player.transform.position.y, _minY, _maxY);
+
+        transform.position = new Vector3(targetX, targetY, transform.position.z);
     }
 
 }

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8218182139364940421}
   - component: {fileID: 8218182139364940422}
   - component: {fileID: 8218182139364940423}
+  - component: {fileID: 3003250915596879317}
   m_Layer: 0
   m_Name: TestDummyV2 1
   m_TagString: Player
@@ -110,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7608cb7a381edad4caecad29b1dd5175, type: 3}
+  m_Sprite: {fileID: 978942612559604503, guid: 73f09a126df145148bf5f0f40597c939, type: 3}
   m_Color: {r: 0.9150943, g: 0.80011463, b: 0.24517618, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,7 +138,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 87e92fbc5d0e0f74c85f09f20b5467ec, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -155,8 +156,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06899443, y: 0.09920758}
-  m_Size: {x: 0.5124392, y: 1.8015848}
+  m_Offset: {x: -0.077843964, y: -0.033153772}
+  m_Size: {x: 1.0377482, y: 2.0663075}
   m_Direction: 0
 --- !u!114 &8218182139364940419
 MonoBehaviour:
@@ -170,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696b8c9a919464143927b8da2bf913fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 10
+  moveSpeed: 4
+  jumpForce: 7
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -191,6 +192,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8218182138969954773}
   bulletPrefab: {fileID: 5466624343574135665, guid: bafc0af36be840349bb5d605c89ed4eb, type: 3}
+  burstFireNumShots: 3
+<<<<<<< HEAD
+  timeBtwnShots: 0.1
+=======
+  timeBtwnShots: 0.3
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+  burstCoolDown: 0.5
 --- !u!114 &8218182139364940421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +247,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ab47585be1f5d4c9e5513bafedcc11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3003250915596879317
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218182139364940424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1bad1eb88e6e0764ea80d6d49b51c7ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8218182139407786270
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +340,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  m_Color: {r: 0.454902, g: 0.454902, b: 0.454902, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -393,7 +422,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.41509432, g: 0.1583661, b: 0.025062274, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
