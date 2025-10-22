@@ -14,7 +14,11 @@ GameObject:
   - component: {fileID: 3877400545582321791}
   - component: {fileID: 3877400546081846007}
   - component: {fileID: 3877400545582321763}
+<<<<<<< HEAD
+  - component: {fileID: 4967095896465051893}
+=======
   - component: {fileID: 4773030218281164946}
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
   m_Layer: 0
   m_Name: BadGuy(melee)
   m_TagString: Enemy
@@ -76,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0.9433962, g: 0.24385896, b: 0.24385896, a: 1}
+  m_Sprite: {fileID: 7896353875547472043, guid: 7cfc270c66f3dd04ead32a135a6756e2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.95686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -151,14 +155,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   distanceBetween: 8
+<<<<<<< HEAD
+--- !u!95 &4967095896465051893
+Animator:
+  serializedVersion: 5
+=======
 --- !u!114 &4773030218281164946
 MonoBehaviour:
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3877400545582321788}
   m_Enabled: 1
+<<<<<<< HEAD
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6301539215723c9469b71f7b69ea3ccb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+=======
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff0f1becd5e73704f8c308da0c069f15, type: 3}
   m_Name: 
@@ -166,3 +190,4 @@ MonoBehaviour:
   moveSpeed: 0
   moveRight: 0
   rb: {fileID: 0}
+>>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
