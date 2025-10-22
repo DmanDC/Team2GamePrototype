@@ -36,10 +36,6 @@ public class Weapon : MonoBehaviour
         // OPTIONAL: If you want hold-to-fire bursts, use GetButton instead:
         // if (Input.GetButton("Fire1") && canFire) { StartCoroutine(Shoot()); }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
     IEnumerator Shoot()
     {
         canFire = false;

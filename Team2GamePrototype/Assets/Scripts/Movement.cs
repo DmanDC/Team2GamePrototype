@@ -32,11 +32,10 @@ public class Movement : MonoBehaviour
     private Animator anim;
 
     private float horizontalInput;
-<<<<<<< HEAD
 
-    void Start()
-    {
-=======
+
+   
+
     // Start is called before the first frame update
 
     private GameObject targetObject;
@@ -45,7 +44,7 @@ public class Movement : MonoBehaviour
 
         targetObject = GameObject.Find("DialogPanel");
         //Get the Rigidbody2D component attached to the game object
->>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -84,20 +83,17 @@ public class Movement : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
         // Face direction
-        if (horizontalInput > 0)
-<<<<<<< HEAD
+        if (horizontalInput > 0) { 
+
             transform.rotation = Quaternion.Euler(0, 0, 0);
-=======
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 0); //facing right
+     
         }
->>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+
         else if (horizontalInput < 0)
             transform.rotation = Quaternion.Euler(0, 180, 0);
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> ae9a9fe72ab3c86d01775e541a9b9517b896788f
+
+
 }
