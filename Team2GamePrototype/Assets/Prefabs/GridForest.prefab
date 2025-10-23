@@ -719,7 +719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7770983760884301458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.2, y: -18.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7770983761423074577}
@@ -1256,7 +1256,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1436,7 +1436,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1446,7 +1446,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1505,8 +1505,8 @@ Tilemap:
     m_Data: {fileID: -352722885375812304, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -6790877635778163277, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 3931779560235752176, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 4
@@ -1523,12 +1523,12 @@ Tilemap:
     m_Data: {fileID: -1745280011730706991, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1883419416733562292, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -6790877635778163277, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 37cce481cb9fa074d9b8bea4f23cec74, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 9af8b90dce481e149af42d5c23c499ea, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -8975904038933796167, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 10
@@ -1619,10 +1619,10 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 430499765
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 1.46875, y: 0.34375, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -1754,7 +1754,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1774,7 +1774,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1879,14 +1879,14 @@ Tilemap:
     m_Data: {fileID: 1161014116271911535, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 2ba44344234517d4ba0e9037cf6cb28b, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -7886920674693596089, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -3257870816796629770, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -7665959542087426895, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 37cce481cb9fa074d9b8bea4f23cec74, type: 3}
+    m_Data: {fileID: -7886920674693596089, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 4545357984841358823, guid: 343cc2aba00998b41b1ae477904079f5, type: 3}
   - m_RefCount: 1

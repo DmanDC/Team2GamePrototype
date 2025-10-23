@@ -350,7 +350,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 430499765
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5698,25 +5698,25 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 1
-    m_Data: {r: 0.9787673, g: 0.5058338, b: 0.5916841, a: 1}
+    m_Data: {r: 0.99138844, g: 0.5225842, b: 0.5685152, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.79713625, g: 0.55163485, b: 0.61763716, a: 1}
+    m_Data: {r: 0.85468847, g: 0.35602883, b: 0.40355048, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7842454, g: 0.47152925, b: 0.47899392, a: 1}
+    m_Data: {r: 0.8153299, g: 0.44094968, b: 0.554502, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.71836495, g: 0.33248183, b: 0.45325541, a: 1}
+    m_Data: {r: 0.86932373, g: 0.59660417, b: 0.6790712, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.728518, g: 0.3301584, b: 0.44478723, a: 1}
+    m_Data: {r: 0.9835659, g: 0.64650744, b: 0.7135242, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9972075, g: 0.4931672, b: 0.6529941, a: 1}
+    m_Data: {r: 0.9009733, g: 0.4610462, b: 0.56831414, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7135897, g: 0.49607146, b: 0.54301983, a: 1}
+    m_Data: {r: 0.8990397, g: 0.4639688, b: 0.5876289, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8331895, g: 0.5719171, b: 0.63985825, a: 1}
+    m_Data: {r: 0.86691874, g: 0.46270084, b: 0.46613753, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9236452, g: 0.5905355, b: 0.5976466, a: 1}
+    m_Data: {r: 0.94380623, g: 0.5911533, b: 0.6609828, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9000897, g: 0.4587402, b: 0.549274, a: 1}
+    m_Data: {r: 0.8260368, g: 0.45348552, b: 0.55465615, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
