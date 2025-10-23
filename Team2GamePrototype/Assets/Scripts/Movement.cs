@@ -32,6 +32,8 @@ public class Movement : MonoBehaviour
     private float horizontalInput;
     // Start is called before the first frame update
 
+    private Animator animator;
+
     private GameObject targetObject;
     void Start()
     {
@@ -39,6 +41,7 @@ public class Movement : MonoBehaviour
         targetObject = GameObject.Find("DialogPanel");
         //Get the Rigidbody2D component attached to the game object
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         //ensure the ground check variable is assigned
         if (groundCheck == null)
@@ -71,8 +74,14 @@ public class Movement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
+        animator.SetFloat("xVelocityAbs", Mathf.Abs(rb.velocity.x));
+
+        animator.SetFloat("yVelocity", rb.velocity.y);
+
         //check if player is grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        animator.SetBool("onGround", isGrounded);
 
         //TODO: optionally we can add aniamtions later
 
@@ -85,6 +94,9 @@ public class Movement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 180, 0); //facing left
         }
+
+
+
     }
 
 

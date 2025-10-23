@@ -12,6 +12,15 @@ public class Weapon : MonoBehaviour
     public float burstCoolDown = 0.5f;
 
     private bool canFire = true;
+    private Animator animator;
+
+    void Start()
+    {
+        // Try to find Animator on this object or its parent
+        animator = GetComponent<Animator>();
+        if (animator == null)
+            animator = GetComponentInParent<Animator>();
+    }
 
 
     // Update is called once per frame
@@ -25,11 +34,19 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canFire = false;
+
+        if (animator != null)
+            animator.SetBool("isShooting", true);
+
         for (int i = 0; i < burstFireNumShots; i++)
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             yield return new WaitForSeconds(timeBtwnShots);
         }
+
+        if (animator != null)
+            animator.SetBool("isShooting", false);
+
         yield return new WaitForSeconds(timeBtwnShots);
         canFire = true;
     }
