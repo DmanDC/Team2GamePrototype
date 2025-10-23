@@ -8090,6 +8090,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8218182139364940424, guid: 33418fb77d98e5a4d97cacdd8f9a63b1, type: 3}
+  _minX: 10
+  _minY: 4
+  _maxX: 34
+  _maxY: 5
 --- !u!1001 &1657192142
 PrefabInstance:
   m_ObjectHideFlags: 0
