@@ -18,11 +18,11 @@ public class EnemyShoot : MonoBehaviour
 
     void Update()
     {
-        // Re-acquire if lost/not yet spawned
+        
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            if (player == null) return; // still nothing this frame
+            if (player == null) return;
         }
 
         float distance = Vector2.Distance(transform.position, player.transform.position);

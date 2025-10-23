@@ -7,7 +7,7 @@ public class Bullet2 : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int damage = 25;
+    public float damage = 25f;
     public GameObject player;
     
 
@@ -20,9 +20,10 @@ public class Bullet2 : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Enemy2 enemy = hitInfo.GetComponent<Enemy2>();
-        if (enemy != null && hitInfo.gameObject.tag == "Enemy")
+        Enemy2 enemy = hitInfo.GetComponentInParent<Enemy2>();
+        if (enemy != null)
         {
+            Debug.Log("Hit" + hitInfo.gameObject.name);
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
