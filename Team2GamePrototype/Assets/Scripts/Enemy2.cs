@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    public float health = 100f;
+    public int health = 100;
 
-    private void Start()
-    {
-        health = maxHealth;
-        healthBar.UpdateHealthBar(health, maxHealth);
-    }
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
-        healthBar.UpdateHealthBar(health, maxHealth);
 
         if (health <= 0)
         {
@@ -27,9 +20,4 @@ public class Enemy2 : MonoBehaviour
         Destroy(gameObject);
     }
 
-    [SerializeField] EnemyHealthbar healthBar;
-    private void Awake()
-    {
-        healthBar = GetComponentInChildren<EnemyHealthbar>();
-    }
 }
