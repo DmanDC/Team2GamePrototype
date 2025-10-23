@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 518648267053170580}
   - component: {fileID: 5372207872222438254}
   - component: {fileID: 2927211702975114960}
+  - component: {fileID: 4600527993036365454}
   m_Layer: 0
   m_Name: EnemyBoss
   m_TagString: Untagged
@@ -137,7 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836a00b8be46b0f40a936b65a3efc64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 600
+  healthBar: {fileID: 0}
 --- !u!114 &5372207872222438254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +176,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4600527993036365454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950288410945042264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03449367274abb49a4d97194c12bd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5416045524794172029, guid: b434e8706aca14c43adce3253787d38a, type: 3}
+  bulletPos: {fileID: 2384786856893155807}
+  burstFireNumShots: 6
+  timeBtwnShots: 0.01
+  burstCoolDown: 0.2
 --- !u!1 &5714575504662553072
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714575504662553072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: -0.11, z: 0}
+  m_LocalPosition: {x: -1.389, y: -0.018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6844168672883129911}
