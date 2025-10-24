@@ -23,7 +23,7 @@ public class PlayerLoss : MonoBehaviour
     private Transform playerTr;
     private PlayerHealth playerHealth;
     private bool bossArmed = false;
-    public bool respawnToStartScene = false;
+    public bool respawnToStartScene = true;
 
     void Start()
     {
@@ -86,10 +86,11 @@ public class PlayerLoss : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             string targetScene = respawnToStartScene
-                ? startSceneName                         // e.g., "TutorialStage" (set in Inspector)
+                ? startSceneName                         // chose which scene
                 : UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;  // same scene
-
+            
             UnityEngine.SceneManagement.SceneManager.LoadScene(targetScene);
+            Debug.Log($"[Respawn] respawnToStartScene={respawnToStartScene}, start='{startSceneName}', loading '{targetScene}'");
         }
 
 

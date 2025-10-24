@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaveBoss.unity
     guid: 6ae4891a940d72644b6605eb185fd697
+  - enabled: 1
+    path: Assets/Scenes/BossDead.unity
+    guid: 19cebfb93c5c0444cbf9027ef8597905
   m_configObjects: {}

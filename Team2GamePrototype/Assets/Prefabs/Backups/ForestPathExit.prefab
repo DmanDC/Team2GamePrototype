@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 896027501937103115}
   - component: {fileID: 896027501937103114}
   - component: {fileID: 896027501937103109}
-  - component: {fileID: 896027501937103113}
   m_Layer: 0
   m_Name: ForestPathExit
   m_TagString: Untagged
@@ -87,15 +86,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0096664, y: 2.0096645}
   m_EdgeRadius: 0
---- !u!114 &896027501937103113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896027501937103108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421a6e1b68deb5d4ea362f7d428a75e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

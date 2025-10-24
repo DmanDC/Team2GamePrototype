@@ -19,6 +19,7 @@ public class Enemy2 : MonoBehaviour
 
         if (health <= 0)
         {
+            GetComponent<LoadSceneOnEnemyDeath>()?.Trigger();
             Die();
         }
     }

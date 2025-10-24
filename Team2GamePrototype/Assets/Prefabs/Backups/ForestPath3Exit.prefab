@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2161167537284188898}
   - component: {fileID: 2161167537284188901}
   - component: {fileID: 2161167537284188900}
-  - component: {fileID: 2161167537284188903}
   m_Layer: 0
   m_Name: ForestPath3Exit
   m_TagString: Untagged
@@ -87,15 +86,3 @@ MonoBehaviour:
   PlatformerPlayer: {fileID: 8218182139364940424, guid: 33418fb77d98e5a4d97cacdd8f9a63b1, type: 3}
   mapStart: {fileID: 0}
   spawnId: Path3
---- !u!114 &2161167537284188903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2161167537284188902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93e7cb60c856e9448411de3a89a0e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

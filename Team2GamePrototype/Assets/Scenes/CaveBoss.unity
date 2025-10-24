@@ -656,10 +656,10 @@ MonoBehaviour:
   lowestY: -10
   reachThreashold: 0.1
   targetPosition: {x: 0, y: 0}
-  startSceneName: CaveBoss
+  startSceneName: TutorialStage
   bossTarget: {fileID: 43017735}
   winOnBossDeath: 1
-  respawnToStartScene: 0
+  respawnToStartScene: 1
 --- !u!4 &587276520
 Transform:
   m_ObjectHideFlags: 0
@@ -910,6 +910,14 @@ PrefabInstance:
     - target: {fileID: 1950288410945042264, guid: 0d7d3a218bfc2ae4182d185236bff917, type: 3}
       propertyPath: m_Name
       value: EnemyBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337355655596872371, guid: 0d7d3a218bfc2ae4182d185236bff917, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337355655596872371, guid: 0d7d3a218bfc2ae4182d185236bff917, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3518555052740121835, guid: 0d7d3a218bfc2ae4182d185236bff917, type: 3}
       propertyPath: m_Size.x

@@ -159,6 +159,7 @@ MonoBehaviour:
   startSceneName: TutorialStage
   bossTarget: {fileID: 0}
   winOnBossDeath: 0
+  respawnToStartScene: 0
 --- !u!4 &7432629
 Transform:
   m_ObjectHideFlags: 0
@@ -250,11 +251,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -278
+      value: -281
       objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -91
+      value: -204
       objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8166,7 +8167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977344405}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.435721, y: 1.1336079, z: 0}
+  m_LocalPosition: {x: 11.29, y: 3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

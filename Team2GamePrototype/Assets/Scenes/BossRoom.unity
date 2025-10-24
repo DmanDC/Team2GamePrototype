@@ -7886,8 +7886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb804b1b597363f4f829a497247a5937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
-  delay: 4
+  sceneToLoad: BossDead
+  delay: 0
 --- !u!1 &1695468266
 GameObject:
   m_ObjectHideFlags: 0

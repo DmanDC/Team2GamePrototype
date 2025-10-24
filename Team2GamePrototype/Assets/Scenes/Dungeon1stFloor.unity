@@ -5032,7 +5032,7 @@ MonoBehaviour:
   startSceneName: Dungeon1stFloor
   bossTarget: {fileID: 0}
   winOnBossDeath: 0
-  respawnToStartScene: 0
+  respawnToStartScene: 1
 --- !u!4 &895984259
 Transform:
   m_ObjectHideFlags: 0

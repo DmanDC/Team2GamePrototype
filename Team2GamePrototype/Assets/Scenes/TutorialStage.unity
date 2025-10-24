@@ -5378,7 +5378,7 @@ MonoBehaviour:
   sentences:
   - 'Ren: Ok, so their base is somewhere here, in this large, hot desert.
 
-    dasdasdsadasdasdasd'
+'
   - 'Ren: Let''s see there are soldiers out there, hopefully they will lead me to
     the base'
   - 'Ren: ....God it''s hot this is the last time I take a mission in the desert.'
@@ -7143,6 +7143,7 @@ MonoBehaviour:
   startSceneName: TutorialStage
   bossTarget: {fileID: 0}
   winOnBossDeath: 1
+  respawnToStartScene: 1
 --- !u!4 &2009552660
 Transform:
   m_ObjectHideFlags: 0
