@@ -4982,9 +4982,10 @@ MonoBehaviour:
   lowestY: -10
   reachThreashold: 0.1
   targetPosition: {x: 0, y: 0}
-  startSceneName: TutorialStage
+  startSceneName: Dungeon1stFloorRoom2
   bossTarget: {fileID: 0}
   winOnBossDeath: 0
+  respawnToStartScene: 0
 --- !u!4 &54414508
 Transform:
   m_ObjectHideFlags: 0
@@ -5239,6 +5240,72 @@ Transform:
   - {fileID: 859441141}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &633117211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633117214}
+  - component: {fileID: 633117213}
+  - component: {fileID: 633117212}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &633117212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633117211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &633117213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633117211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &633117214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633117211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &643339172
 PrefabInstance:
@@ -5526,6 +5593,36 @@ Transform:
   - {fileID: 16897384}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &857205936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 857205937}
+  m_Layer: 0
+  m_Name: Startpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &857205937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857205936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.12, y: 6.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859441140
 GameObject:
@@ -5994,11 +6091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -282
+      value: -286
       objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -104
+      value: -204.4
       objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6289,7 +6386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformerPlayer: {fileID: 8218182139364940424, guid: 33418fb77d98e5a4d97cacdd8f9a63b1, type: 3}
-  mapStart: {fileID: 0}
+  mapStart: {fileID: 857205937}
   spawnId: FromExit
 --- !u!61 &1162837391
 BoxCollider2D:
@@ -6372,7 +6469,21 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1201018642}
     m_ColliderPaths:
-    - - X: 20000000
+    - - X: 420000100
+        Y: -10000041
+      - X: 420000100
+        Y: 0
+      - X: 430000000
+        Y: 0
+      - X: 430000000
+        Y: 100000000
+      - X: 10000000
+        Y: 100000000
+      - X: 10000000
+        Y: -10000000
+      - X: 20000000
+        Y: -10000000
+      - X: 20000000
         Y: 40000000
       - X: 30000000
         Y: 40000000
@@ -6401,8 +6512,12 @@ CompositeCollider2D:
       - X: 409999900
         Y: 0
       - X: 409999900
-        Y: 10000000
-      - X: 170000000
+        Y: -10000041
+      - X: 409999959
+        Y: -10000100
+      - X: 420000041
+        Y: -10000100
+    - - X: 170000000
         Y: 10000000
       - X: 170000000
         Y: 15000000
@@ -6440,22 +6555,12 @@ CompositeCollider2D:
         Y: 90000000
       - X: 420000000
         Y: 10000100
-      - X: 420000041
+      - X: 409999959
         Y: 10000100
-      - X: 420000100
+      - X: 409999900
         Y: 10000041
-      - X: 420000100
-        Y: 0
-      - X: 430000000
-        Y: 0
-      - X: 430000000
-        Y: 100000000
-      - X: 10000000
-        Y: 100000000
-      - X: 10000000
-        Y: -10000000
-      - X: 20000000
-        Y: -10000000
+      - X: 409999900
+        Y: 10000000
     - - X: 40000000
         Y: 30000000
       - X: 30000000
@@ -6482,7 +6587,13 @@ CompositeCollider2D:
         Y: 0
   m_CompositePaths:
     m_Paths:
-    - - {x: 1.9999708, y: -1}
+    - - {x: 41.999973, y: -1.00001}
+      - {x: 42.00004, y: 0}
+      - {x: 43, y: 0.000029300001}
+      - {x: 42.999973, y: 10}
+      - {x: 1, y: 9.99997}
+      - {x: 1.0000293, y: -1}
+      - {x: 2, y: -0.99997073}
       - {x: 2.0000293, y: 4}
       - {x: 3, y: 4.000029}
       - {x: 3.0000293, y: 5}
@@ -6496,9 +6607,9 @@ CompositeCollider2D:
       - {x: 14.000029, y: 1}
       - {x: 16, y: 0.9999706}
       - {x: 16.000029, y: 0}
-      - {x: 40.999992, y: 0.000029300001}
-      - {x: 40.99996, y: 1}
-      - {x: 17, y: 1.0000294}
+      - {x: 40.999992, y: -0.0000294}
+      - {x: 41.000027, y: -1.00001}
+    - - {x: 17.000029, y: 1}
       - {x: 16.999992, y: 1.5000076}
       - {x: 16.499989, y: 2}
       - {x: 16, y: 2.0000293}
@@ -6516,23 +6627,19 @@ CompositeCollider2D:
       - {x: 2, y: 6.0000296}
       - {x: 2.0000293, y: 9}
       - {x: 42, y: 8.99997}
-      - {x: 42.00004, y: 0}
-      - {x: 43, y: 0.000029300001}
-      - {x: 42.999973, y: 10}
-      - {x: 1, y: 9.99997}
-      - {x: 1.0000293, y: -1}
+      - {x: 41.999973, y: 1.00001}
     - - {x: 3.999971, y: 2}
       - {x: 3.999971, y: 3}
       - {x: 3, y: 2.999971}
       - {x: 3.0000293, y: 2}
-    - - {x: 10.99997, y: 0}
-      - {x: 10.99997, y: 1}
-      - {x: 10, y: 0.99997073}
-      - {x: 10.00003, y: 0}
     - - {x: 7.9999704, y: 0}
       - {x: 7.9999704, y: 1}
       - {x: 7, y: 0.99997073}
       - {x: 7.0000296, y: 0}
+    - - {x: 10.99997, y: 0}
+      - {x: 10.99997, y: 1}
+      - {x: 10, y: 0.99997073}
+      - {x: 10.00003, y: 0}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1201018641
@@ -6634,6 +6741,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 6
       m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 41, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6910,6 +7027,16 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 40, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 41, y: 0, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 7
@@ -7745,7 +7872,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 8801166d30b06d84aadef948569baaea, type: 2}
-  - m_RefCount: 76
+  - m_RefCount: 78
     m_Data: {fileID: 11400000, guid: cc9bd8de62893b34bbadd4f7ac928a7b, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 475f0ef70900a2743bf4bf5299d31436, type: 2}
@@ -7808,7 +7935,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 9
     m_Data: {fileID: 9039649710130466848, guid: af89abe040f91e44c8679c966b3e8989, type: 3}
-  - m_RefCount: 76
+  - m_RefCount: 78
     m_Data: {fileID: -9137202733848781849, guid: af89abe040f91e44c8679c966b3e8989, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1281440011619190713, guid: af89abe040f91e44c8679c966b3e8989, type: 3}
@@ -7857,7 +7984,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -6519603601847834372, guid: af89abe040f91e44c8679c966b3e8989, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 110
+  - m_RefCount: 112
     m_Data:
       e00: 1
       e01: 0
@@ -7876,7 +8003,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 110
+  - m_RefCount: 112
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -8244,6 +8371,9 @@ MonoBehaviour:
   typingSpeed: 0.002
   continueButton: {fileID: 1634840346}
   DialogPanel: {fileID: 1634840348}
+  loadSceneOnFinish: 0
+  sceneToLoadOnFinish: 
+  finishLoadDelay: 0
   dialogKey: TutorialIntro
 --- !u!1 &1647807646
 GameObject:
@@ -8750,7 +8880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlatformerPlayer: {fileID: 8218182139364940424, guid: 33418fb77d98e5a4d97cacdd8f9a63b1, type: 3}
-  mapStart: {fileID: 0}
+  mapStart: {fileID: 857205937}
   spawnId: FromEntrance
 --- !u!61 &1950529464
 BoxCollider2D:

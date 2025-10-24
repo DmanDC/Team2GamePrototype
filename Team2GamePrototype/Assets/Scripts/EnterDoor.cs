@@ -132,6 +132,7 @@ public class EnterDoor : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
         if (enterAllowed && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
             SceneSpawnRouter.NextSpawnId = targetSpawnId;

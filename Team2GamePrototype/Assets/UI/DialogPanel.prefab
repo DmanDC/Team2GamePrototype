@@ -1,60 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4054059107230355582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4505474932518404188}
-  - component: {fileID: 3352940845997000864}
-  m_Layer: 0
-  m_Name: DialogManager2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4505474932518404188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4054059107230355582}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -155.02502, y: 208.02504, z: 0}
-  m_LocalScale: {x: 0.6625001, y: 0.6625001, z: 0.6625001}
-  m_Children: []
-  m_Father: {fileID: 4948146438014983970}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3352940845997000864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4054059107230355582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d036b09abcefa045bc68554c957989f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
-  sentences:
-  - 'Ren: I''m guessing you''re the boss of this operation.'
-  - '???: I guess you can say that, I''m Elijah, I assume your the dog the government
-    sent.'
-  - Ren:Yeah, so I don't suppose you'll just give up now would you?
-  - 'Elijah: Not happening.'
-  - 'Ren: Haaa it''s never a easy mission.'
-  typingSpeed: 0.002
-  continueButton: {fileID: 0}
-  DialogPanel: {fileID: 0}
-  dialogKey: BossRoom
 --- !u!1 &4948146438014983971
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +32,6 @@ RectTransform:
   - {fileID: 4948146438331920173}
   - {fileID: 4948146438127211835}
   - {fileID: 4948146439398164409}
-  - {fileID: 4505474932518404188}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -583,4 +527,7 @@ MonoBehaviour:
   typingSpeed: 0
   continueButton: {fileID: 0}
   DialogPanel: {fileID: 0}
+  loadSceneOnFinish: 0
+  sceneToLoadOnFinish: 
+  finishLoadDelay: 0
   dialogKey: Intro_01

@@ -110,7 +110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 978942612559604503, guid: 73f09a126df145148bf5f0f40597c939, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,8 +156,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4329219, y: 0.04976356}
-  m_Size: {x: 1.841474, y: 3.7712085}
+  m_Offset: {x: -0.43292192, y: -0.16712622}
+  m_Size: {x: 1.841474, y: 3.337429}
   m_Direction: 0
 --- !u!114 &8218182139364940419
 MonoBehaviour:
@@ -214,6 +214,7 @@ MonoBehaviour:
   startSceneName: TutorialStage
   bossTarget: {fileID: 0}
   winOnBossDeath: 1
+  respawnToStartScene: 0
 --- !u!114 &8218182139364940422
 MonoBehaviour:
   m_ObjectHideFlags: 0
