@@ -981,7 +981,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.083782196, y: -1.0532999}
@@ -2784,6 +2784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healthbar
       objectReference: {fileID: 0}
+    - target: {fileID: 1620818355458092611, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2868,6 +2872,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2351253794760038520, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.000015258789
@@ -2922,11 +2942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8889192478418006952, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8889192478418006952, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}

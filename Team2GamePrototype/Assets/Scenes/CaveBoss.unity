@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healthbar
       objectReference: {fileID: 0}
+    - target: {fileID: 1620818355458092611, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1860747420691710704, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -348,6 +352,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571945852188936429, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.000015258789
       objectReference: {fileID: 0}
@@ -401,11 +417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8889192478418006952, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8889192478418006952, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d879d71455b144c9d6f03e4fe0486e, type: 3}
