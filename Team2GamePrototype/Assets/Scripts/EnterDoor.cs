@@ -51,6 +51,53 @@ public class EnterDoor : MonoBehaviour
              enterAllowed = true;
          }
         */
+        if (collision.GetComponent<ForestPath1>())
+        {
+            sceneToLoad = "ForestPath1";
+            targetSpawnId = "Path1";
+            enterAllowed = true;
+        }
+        else if (collision.GetComponent<ForestPathExit>())
+        {
+            sceneToLoad = "ForestStart";
+            targetSpawnId = "Path1";
+            enterAllowed = true;
+        }
+        if (collision.GetComponent<ForestPath2>()) {
+            sceneToLoad = "ForestPath2";
+            targetSpawnId = "Path2";
+            enterAllowed = true;
+        }
+        else if (collision.GetComponent<ForestPath2Exit>()) {
+            sceneToLoad = "ForestStart";
+            targetSpawnId = "Path2";
+            enterAllowed = true;
+        }
+        if (collision.GetComponent<ForestPath3>()) {
+            sceneToLoad = "ForestPath3";
+            targetSpawnId = "Path3";
+            enterAllowed = true;
+        }
+        else if (collision.GetComponent<ForestPath3Exit>())
+        {
+            sceneToLoad = "ForestStart";
+            targetSpawnId = "Path3";
+            enterAllowed = true;
+        }
+        if (collision.GetComponent<CaveEntrance>())
+        {
+            sceneToLoad = "CaveBoss";
+            targetSpawnId = "CaveStart";
+            enterAllowed = true;
+        }
+       /* else if (collision.GetComponent<CaveExit>())
+        {
+            sceneToLoad = "ForestPath3";
+            targetSpawnId = "CaveStart";
+            enterAllowed = true;
+        }
+       */
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -60,7 +107,17 @@ public class EnterDoor : MonoBehaviour
         collision.GetComponent<FirstDoor>() ||
         collision.GetComponent<FirstDoorExit>() ||
         collision.GetComponent<Latter>() ||
-        collision.GetComponent<Latter2>())
+        collision.GetComponent<Latter2>() ||
+        collision.GetComponent<ForestPath1>() || 
+        collision.GetComponent<ForestPathExit>() ||
+        collision.GetComponent<ForestPath2Exit>() ||
+        collision.GetComponent<ForestPath2>() || 
+        collision.GetComponent<ForestPath3>() ||
+        collision.GetComponent<ForestPath3Exit>() ||
+        collision.GetComponent<CaveEntrance>() ||
+        collision.GetComponent<CaveExit>()
+
+        )
         {
             enterAllowed = false;
         }
@@ -75,6 +132,7 @@ public class EnterDoor : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
         if (enterAllowed && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
             SceneSpawnRouter.NextSpawnId = targetSpawnId;

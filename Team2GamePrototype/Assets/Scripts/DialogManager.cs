@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class DialogManager : MonoBehaviour
 {
     public TMP_Text textbox;
@@ -15,28 +17,30 @@ public class DialogManager : MonoBehaviour
 
     public GameObject continueButton;
     public GameObject DialogPanel;
-
-
+    public bool loadSceneOnFinish = false;
+    public string sceneToLoadOnFinish = "";
+    public float finishLoadDelay = 0f;
+ 
 
     public string dialogKey = "Intro_01";
 
 
 
-    // session-memory: resets when the app restarts (and when domain reload happens in Editor)
+    // lets players see messages again if they retry
     private static readonly HashSet<string> shownThisSession = new HashSet<string>();
 
     private void OnEnable()
     {
-        // Auto-wire if something wasn’t set in the Inspector
-        if (!DialogPanel) DialogPanel = gameObject; // or find the panel explicitly
+        // add to inspector automaticaly
+        if (!DialogPanel) DialogPanel = gameObject;
         if (!textbox) textbox = GetComponentInChildren<TMPro.TMP_Text>(true);
         if (!continueButton)
         {
-            var btn = GetComponentInChildren<Button>(true); // finds the first Button (even if inactive)
-            if (btn) continueButton = btn.gameObject;       // assign its GameObject
+            var btn = GetComponentInChildren<Button>(true); // finds the first Button
+            if (btn) continueButton = btn.gameObject;      
         }
 
-        // Final guard: if anything is still missing, bail with a clear message
+        
         if (!DialogPanel || !textbox || !continueButton || sentences == null || sentences.Length == 0)
         {
             Debug.LogError("DialogManager not wired in this scene: assign DialogPanel, textbox, continueButton, and sentences.");
@@ -44,14 +48,14 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        // If we've already shown this dialog in this app session, hide the panel and exit
+        //  already shown this dialog in this app session, hide the panel and exit
         if (shownThisSession.Contains(dialogKey))
         {
             if (DialogPanel != null) DialogPanel.SetActive(false);
             return;
         }
 
-        // Make sure the panel is visible before typing
+        // shows panel before typing
         if (DialogPanel != null) DialogPanel.SetActive(true);
 
 
@@ -60,6 +64,7 @@ public class DialogManager : MonoBehaviour
 
         index = 0;
         textbox.text = "";
+       
         StartCoroutine(Type());
     }
 
@@ -88,11 +93,21 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            // finished: mark as shown for this session and hide
+            // tells script it shown up already
             shownThisSession.Add(dialogKey);
             textbox.text = "";
             if (DialogPanel != null) DialogPanel.SetActive(false);
+            
+        }
+        if (loadSceneOnFinish && !string.IsNullOrEmpty(sceneToLoadOnFinish))
+        {
+            if (finishLoadDelay <= 0f) SceneManager.LoadScene(sceneToLoadOnFinish);
+            else StartCoroutine(LoadAfterDelay());
         }
     }
-
+    IEnumerator LoadAfterDelay()
+    {
+        yield return new WaitForSeconds(finishLoadDelay);
+        SceneManager.LoadScene(sceneToLoadOnFinish);
+    }
 }
